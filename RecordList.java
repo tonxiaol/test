@@ -46,7 +46,7 @@ public class RecordList {
 
 	
 	public boolean hasNextRecord() {
-
+		return true;
 	}
 
 	public boolean hasPreviousRecord() {
