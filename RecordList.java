@@ -1,6 +1,9 @@
-package kidsactivitymanager;
+package kidsactivitymanager.test;
+
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class RecordList {
 
@@ -25,6 +28,14 @@ public class RecordList {
 		return matchingRecords;
 	}
 
+	public void sortRecordsByActivityName() {
+        Collections.sort(records, Comparator.comparing(Record::getActivityName));
+    }
+
+	public void sortRecordByStartDate() {
+        Collections.sort(records, Comparator.comparing(Record::getSchedule));
+    }
+
 	public void modifyRecord(int recordId, String newName, int newAge, Address newAddress) {
 		for (Record record : records) {
 			if (record.getRecordId() == recordId) {
@@ -44,7 +55,16 @@ public class RecordList {
 
 	// }
 
-	
+	public void sortByAcitivtyName(String activityName) {
+
+
+	}
+
+	public void sortByStartingDate() {
+		// TODO - implement RecordList.sortByStartingDate
+		throw new UnsupportedOperationException();
+	}
+
 	public boolean hasNextRecord() {
 		return true;
 	}
@@ -74,14 +94,6 @@ public class RecordList {
 		throw new UnsupportedOperationException();
 	}
 
-	public void sortByAcitivtyName() {
-		// TODO - implement RecordList.sortByAcitivtyName
-		throw new UnsupportedOperationException();
-	}
 
-	public void sortByStartingDate() {
-		// TODO - implement RecordList.sortByStartingDate
-		throw new UnsupportedOperationException();
-	}
 
 }

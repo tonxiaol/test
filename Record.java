@@ -21,7 +21,7 @@ public class Record {
 		this.generateReordId();
 	}
 
-	public Record(int recordId, String activityName, Participant pariticipant) {
+	public Record(String activityName, Participant pariticipant) {
 		this.generateReordId();
 		this.activityName = activityName;
 		this.participant = pariticipant;

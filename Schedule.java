@@ -1,11 +1,18 @@
 package kidsactivitymanager;
 
-public class Schedule {
+public class Schedule implements Comparable {
 
 	private LocalDate startDate;
 	private LocalDate endDate;
 	private LocalTime startTime;
 	private LocalTime endTime;
+	
+	@Override
+	public int compareTo(Schedule a){
+		if(this.startDate > a.startDate)
+			return 1;
+		return -1;
+	}
 
 	public LocalDate getStartDate() {
 		return this.startDate;
